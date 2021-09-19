@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.List;
 
 public class BubleSort {
 	public BubleSort() {
@@ -20,11 +21,18 @@ public class BubleSort {
 		return unsortedData;
 	}
 
+	public List<int> doBubleSort(List<int> unsortedData) {
+		int temp;
+	
+	}
+
 	public static void main(String[] args) {
 
 		int data[] = {1, 4, 2, 5, 8};
 		BubleSort bs = new BubleSort();
 		
 		System.out.println(Arrays.toString(bs.doBubleSort(data)));
+
+		List<int> dataList = Arrays.asList(1, 4, 2, 5, 8);
 	}
 }
