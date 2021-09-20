@@ -65,6 +65,23 @@ public class BubleSort {
         return unsortedData;
     }
 
+    public List<Integer> doReverseBubleSort(List<Integer> unsortedData) {
+        int temp;
+        int length = unsortedData.size();
+
+        for (int i = length - 1; i >= 0; i--) {
+            for (int j = length - i - 1; j > 0; j--) {
+                if (unsortedData.get(j) < unsortedData.get(j - 1)) {
+                    temp = unsortedData.get(j);
+                    unsortedData.set(j, unsortedData.get(j - 1));
+                    unsortedData.set(j - 1, temp);
+                }
+            }
+        }
+
+        return unsortedData;
+    }
+
     public static void main(String[] args) {
 
         BubleSort bs = new BubleSort();
@@ -75,5 +92,6 @@ public class BubleSort {
 
         List<Integer> dataList = Arrays.asList(1, 4, 2, 5, 8);
         System.out.println(bs.doBubleSort(dataList).toString());
+        System.out.println(bs.doReverseBubleSort(dataList));
     }
 }
